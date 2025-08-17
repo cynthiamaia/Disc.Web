@@ -1,0 +1,99 @@
+<!-- Exemplo: Página de Blog de Viagens -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog de Viagens</title>
+    <style>
+        /* estilo para todas as tabelas */
+        table {
+            width: 100%; /* a tabela ocupa toda a largura disponivel */
+            border-collapse: collapse; /* junta as bordas */
+            margin-bottom: 30px; /* espaco de 30px abaixo de cada tabela   */
+        }
+        /* estilo da tavela para permitir rolagem */
+        .table-wrapper {
+            overflow-x:auto;  /* adicionar a barra de rolagem automatica */          
+        }
+        th, td{
+            border: 1px solid black;
+        }
+        h1 {
+            color: #2c3e50; /* define a cor do texto */
+            text-align: center; /* centralizar o texto*/
+            margin-bottom: 30px; /* cria um espaco de 30px abaixo do h1*/
+        }
+        ul {
+            margin-bottom: 40px;
+        }
+    
+    </style>
+
+
+
+
+</head>
+<body>
+    <h1>Viajante Digital</h1>
+    <div>
+        <a href="#destinos">Destinos</a>
+        <a href="#dicas">Dicas</a>
+    </div>
+    <h2 id="destinos"> Proximos destinos</h2>
+    <ul>
+        <li>Tailandia</li>
+        <li>Canada</li>
+    </ul>
+    <h1> Destaque do mes : Nova York</h1>
+    <h2> Estatua da liberdade</h2>
+    <p>Visita imperdivel</p>
+    <ol>
+        <li>Primeiro item da lista</li>
+        <li>Segundo item da lista</li>
+    </ol>
+    <ul>
+        <li> item 1</li>
+        <ul style="list-style-type:square;">
+            <li> Subitem 1</li>
+            <li>Subitem 2</li>
+        </ul>
+    </ul>
+    <dl>
+        <dt>HTML</dt>
+        <dd> Linguagem de marcacao para web</dd>
+        <dt>CSS</dt>
+        <dd> Linguagens de estilos para a web</dd>
+    </dl>
+
+    <div class="table-wrapper">
+        <table>
+            <caption>Precos</caption>
+            <tr>
+                <th>Nome</th>
+                <th>Preco</th>
+            </tr>
+            <tr>
+               <td>Notebook</td> 
+               <td>9200</td>
+            </tr>
+        </table>
+   <!-- tabela com mesclagem de celulas -->
+   <table>
+        <tr>
+            <th colspan="2"> Cabecalho unificado</th> <!-- une duas colunas -->
+        </tr>
+        <tr>
+            <td> Dado 1 </td>
+            <td> Dado 2 </td>
+        </tr>
+        <tr>
+            <td rowspan="2">Dado 3</td> <!-- Une duas linhas -->
+            <td> Dado 4</td>
+        </tr>
+        <tr>
+            <td> Dado 5</td>
+        </tr>
+   </table> 
+        
+</body>
+</html>
