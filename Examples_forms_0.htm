@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+</head>
+<body>
+  <form method="post"> <!-- Criar um formulario--> 
+    <!-- POST - envia os dados de forma mais segura-->
+    <!--placeholder - dica de preenchimento-->
+    <!-- inputs com atributos: type(email, password)-->
+    <input type="text" name="usuario" placeholder="Entre com o nome">
+    <input type="password" name="password" placeholder="Entre com uma senha">
+    <input type="submit" value="Entrar">
+  </form>
+  <form method="get">
+    <!-- GET-outra forma de envio de dados, com visualizacao na URL-->
+    <input type="email" name="email" placeholder="Entre com e-mail">
+  </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="paises"> <!--permite que o usuario escolha a opcao-->
+        <option value="br">Brasil</option>
+        <option value="es">Estados Unidos</option>
+        <option value="in">India</option>
+    </select>
+    <form>
+    <label> Usuario (3 a 10 caracteres)</label>
+    <input type="text" name="usuario" minleght="3" maxlength="10" required>
+    <input type="submit" value="Enviar">
+    <label> Idade (min.18, max.60)</label>
+    <input type="number" name="idade" min="18" max="60" required>
+    <label> <input type="checkbox" name="interesses" value="codigo"></label>
+    <label> <input type="checkbox" name="interesses" value="musica"></label>
+    <!--- checkbox - selecao de uma ou mais opcoes entre varias-->    
+</form>
+</body>
+</html>

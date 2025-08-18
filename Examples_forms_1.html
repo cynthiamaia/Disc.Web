@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 2</title>
+    <style>
+        button {
+            color: white;
+            border-radius: 4px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <label> Usuario </label> <!--legenda para o item-->
+       <input type="text" name="usuario" placeholder="Entre com o usuario" required>
+       <label> Senha </label>
+       <input type="password" name="senha" placeholder="Senha">
+       <input type="submit" value="Enviar">
+
+       <label><input type="radio" name="gender" value="Masculino">Masculino</label>
+       <label><input type="radio" name="gender" value="Feminino">Feminino</label> 
+    </form>
+    <form method="post">
+        <!--textarea- captura entradas de texto-->
+        <textarea name="comments" rows="4" cols="50" placeholder="Comentario"></textarea>
+        <br> <!--quebra de linha-->
+        <button type="submit"></button> <!-- botao de envio do formulario-->
+    </form>    
+</body>
+</html>
