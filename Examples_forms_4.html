@@ -4,9 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Contato</title>
+    <style>
+        * { /* seletor universal */
+            box-sizing: border-box; 
+            margin: 0; /* zera margens */
+            padding: 0; /* zera preenchimentos padrao */
+            font-family: 'Segoe UI', Tahoma, Geneva, verdana, sans-serif
+        }
+        .asterisco {
+            color:#e74c3c
+        }
+        body {
+            background: linear-gradient(
+                135deg, #152844 0% #e5dee2 100%);
+                /* o valor do angulo definea direcao do gradiente
+             cor inicial, % porque comeca no inicio*/
+            justify-content: center;  
+            /* centraliza horizontalmente  */
+            align-items: center;
+            display: flex; /* permite a centralizacao */
+                    }
+        .form-group{
+            margin-bottom: 20px 
+            /* espaco entre os grupos de campos */
+        }
+        label {
+            color: #2c3e59; /* cor do label */
+            margin-bottom:8px; /* espaco entre o label e o campo */
+            font-weight:500 /*  peso da fonte */
+        }
+        h1 {
+            color: #2c3e50; /*cor do titulo */
+            font-weight: 600;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            width: 100%;
+            border: none;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 15px;
+        }
+    </style>
 </head>
 <body>
     <form id="contacForm">
+        <h1> Formulario de contato</h1>
         <div class="form-group">
             <label> Nome de usuário </label>
             <input type="text" name="usuario" 
@@ -35,9 +83,14 @@
                 </textarea>
             </div>
             <div class="form-group">
-                <input type="chekbox">
+                <input type="checkbox">
                 <label>Desejo receber novidades por e-mail</label>
             </div>
+            <button type="submit">Enviar Mensagem</button>
     </form>
+    <div class="form-footer">
+        <p><span class="asterisco">*</span>
+            Campos Obrigatorios</p>
+    </div>
 </body>
 </html>
