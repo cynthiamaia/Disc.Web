@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <style>
+    * {
+      box-sizing: border-box; /* Faz padding e borda fazerem parte do tamanho total do elemento */
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão */
+    }
+        .asterisco {
+            color:#e74c3c
+        }
+        /* Caixa principal do formulário */
+        .container {
+        width: 100%;
+        max-width: 600px;            /* Limita a largura máxima */
+        background: white;           /* Fundo branco */
+        border-radius: 10px;         /* Bordas arredondadas */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+        padding: 30px;               /* Espaçamento interno */
+        }
+        /* Título do formulário */
+        h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        font-weight: 600;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);;
+            justify-content: center;  
+            /* centraliza horizontalmente  */
+            align-items: center;
+            display: flex;               /* Centraliza usando flexbox */
+            min-height: 100vh;           /* Altura mínima da tela inteira */
+            padding: 20px;
+                    }
+        .form-group{
+            margin-bottom: 20px 
+            /* espaco entre os grupos de campos */
+        }
+        label {
+            color: #2c3e59; /* cor do label */
+            margin-bottom:8px; /* espaco entre o label e o campo */
+            font-weight:500; /*  peso da fonte */
+            display: block;      /* Força ficar acima do input */
+        }/* Botão principal */
+        button {
+        background-color: #4CAF50;
+        color: white;
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        }
+
+        button:hover {
+        background-color: #45a049;
+        }
+          /* Estilos para inputs, textarea*/
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="url"],
+    textarea,
+    select {
+      width: 100%;           /* Ocupa toda a largura */
+      padding: 12px 15px;    /* Espaçamento interno */
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: all 0.3s ease; /* Animação suave em interações */
+    }
+    /* Efeito ao focar no campo */
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #4CAF50;                    /* Borda verde */
+      outline: none;                            /* Remove o contorno padrão */
+      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2); /* Efeito de sombra verde */
+    }
+    /* Estilo específico do textarea */
+    textarea {
+      min-height: 120px;
+      resize: vertical; /* Usuário pode redimensionar verticalmente */
+    }
+
+   
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-group input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .inline-options {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .inline-options label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+      font-weight: 400;
+      color: #2c3e50;
+    }
+    .required {
+        color: #e74c3c;
+      }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Contato</h1>
+        <form id="contacForm">
+            <div class="form-group">
+            <label>Nome de usuário <span class="required">*</span></label>
+                <input type="text" name="usuario" 
+                placeholder="Digite seu nome de usuario" required>
+            </div>
+            <div class="form-group">
+                <label> E-mail</label>
+                <input type="email" name="email"
+                placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+                <label>Assunto</label>
+                <select id="assunto" name="assunto">
+                    <!--menu de opcoes-->
+                    <option value="">Selecione um assunto</option>
+                    <option value="duvida">Duvida</option>
+                    <option value="sugestao">Sugestao</option>
+                    <option value="reclamacao">Reclamacao</option>
+                    <option value="elogio">Elogio</option>
+                </select>
+            </div>
+                <div class="form-group">
+                    <label>Comentario</label>
+                    <textarea id="comentario"name="comentario"
+                        placeholder="Digite seu comentario aqui..." required>
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox">
+                    <label>Desejo receber novidades por e-mail</label>
+                </div>
+                <button type="submit">Enviar Mensagem</button>
+        </form>
+        <div class="form-footer">
+            <p><span class="asterisco">*</span>
+                Campos Obrigatorios</p>
+        </div>
+    </div>
+</body>
+</html>
