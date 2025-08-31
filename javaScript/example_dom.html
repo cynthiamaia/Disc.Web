@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="demo">Texto</p>
+    <script>
+        document.getElementById("demo").style.color = "red"
+    </script>
+    <p class="texto"> Este é o primeiro paragrafo</p>
+    <p class="texto"> Este é o segundo paragrafo</p>
+    <script>
+       let elemento = document.getElementsByClassName("texto") 
+       console.log(elemento[0].innerText)
+       console.log(elemento[1].innerText)
+    </script>
+</body>
+</html>
