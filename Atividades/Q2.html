@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternância de Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        
+        .caixa {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .inativo {
+            background-color: lightgray;
+            border: 2px solid gray;
+            color: #333;
+        }
+
+        .ativo {
+            background-color: lightgreen;
+            border: 2px solid green;
+            color: darkgreen;
+            transform: scale(1.05);
+        }
+        
+        .botao {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        
+        .status {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Alternância de Classes CSS</h2>
+        <div id="caixa" class="caixa inativo">Clique no botão para alterar a classe.</div>
+        <button class="botao" onclick="alternarClasse()">Alternar Classe</button>
+        <div class="status" id="status">Classe atual: inativo</div>
+    </div>
+
+    <script>
+        function alternarClasse() {
+            let elemento = document.getElementById('caixa');
+            //Usa o método classList.toggle() para alternar (adicionar/remover) as classes 'ativo' e 'inativo' do elemento.
+            elemento.classList.toggle('ativo');
+            //elemento.classList.toggle('inativo');
+            
+            // Atualiza o texto de status
+            let status = document.getElementById('status');
+            if (elemento.classList.contains('ativo')) {
+                status.textContent = 'Classe atual: ativo';
+            } else {
+                status.textContent = 'Classe atual: inativo';
+            }
+        }
+    </script>
+</body>
+</html>

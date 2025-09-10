@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Formulário</title>
+    <style>
+        /* Estilos básicos para a página */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        /* Estilo para o campo de entrada */
+        input {
+            padding: 8px;
+            width: 100%;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        
+        /* Estilo para o botão */
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Estilo para mensagens de erro */
+        .erro {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Exemplo</h1>
+    
+    <!-- Formulário com validação onsubmit -->
+    <form id="meuFormulario" onsubmit="return validarFormulario()">
+        <label for="nome">Nome:</label>
+        <!-- Campo de entrada de texto para o nome -->
+        <input type="text" id="nome" name="nome">
+        <!-- Local para exibir mensagens de erro -->
+        <div id="erro" class="erro"></div>
+        
+        <!-- Botão para enviar o formulário -->
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        // Função para validar o formulário
+        function validarFormulario() {
+            // Obtém o valor do campo nome, removendo espaços em branco
+            var nome = document.getElementById('nome').value;
+            
+            // Obtém o elemento onde será exibido o erro
+            var erroElemento = document.getElementById('erro');
+            
+            // Verifica se o nome está vazio
+            if (nome === '') {
+                // Se estiver vazio, exibe mensagem de erro
+                erroElemento.textContent = 'Por favor, preencha o campo nome.';
+                
+                // Retorna false para impedir o envio do formulário
+                return false;
+            }
+            
+            // Se o nome estiver preenchido, limpa qualquer mensagem de erro
+            erroElemento.textContent = '';
+            
+            // Retorna true para permitir o envio do formulário
+            return true;
+        }
+    </script>
+</body>
+</html>

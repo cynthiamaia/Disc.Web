@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="houver"> Passe o mouse aqui</button>
+    <button id="dublo">Clique duas vezes</button>
+    <script>
+        // mouseover -> passar o mouse em cima
+        document.getElementById('houver').addEventListener('mouseover', function(){
+            alert("Mouse por cima!")
+        })
+        document.getElementById("dublo").addEventListener("dblclick", function(){
+            alert("Dublo clique")
+        }
+    )
+    </script>
+</body>
+</html>

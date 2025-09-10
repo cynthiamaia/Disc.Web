@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternando Classes</title>
+</head>
+<body>
+    <div id="caixa">Clique no botao para alterar a classe        
+    </div>
+    <button onclick="alterarClasse()"></button>
+    <script>
+        function alterarClasse(){
+            let elemento = document.getElementById("caixa")
+            elemento.classList.toggle("ativo")
+        }
+    </script>
+</body>
+<style>
+    .caixa {
+        width: 200px;
+        height: 200px;
+        background-color: lightgray;
+    }
+    .ativo {
+        background-color: lightgreen;
+        border: 2px solid green
+    }
+</style>
+</html>

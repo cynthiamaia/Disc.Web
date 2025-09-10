@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alteração de Estilo</title>
+</head>
+<body>
+    <p id="texto">Este parágrafo mudará de estilo ao clicar no botão.</p>
+    <button onclick="mudarEstilo()">Mudar Estilo</button>
+
+    <script>
+        function mudarEstilo() {
+            const paragrafo = document.getElementById('texto');
+            paragrafo.style.backgroundColor = 'yellow';
+            paragrafo.style.color = 'red';
+            paragrafo.style.fontSize = '24px';
+        }
+    </script>
+</body>
+</html>

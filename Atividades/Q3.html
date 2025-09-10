@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterador de Imagem</title>
+    <style>
+       
+       
+        .image-container {
+            margin: 25px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+        }
+        
+        #imagem {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: opacity 0.5s ease;
+        }
+        
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f8ff;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Alterador de Imagem</h1>
+        
+        <div class="image-container">
+            <img id="imagem" src="https://placehold.co/600x400/4CAF50/white?text=Imagem+Inicial" alt="Imagem inicial">
+        </div>
+        
+        <button class="btn" onclick="alterarImagem()">Alterar Imagem</button>
+        
+        <div class="status" id="status">Imagem atual: Imagem Inicial</div>
+        
+        <div class="alt-text">Texto alternativo: <span id="alt-text">Imagem inicial</span></div>
+        
+        <div class="instructions">
+            <p>Clique no botão para alternar entre a imagem inicial e a imagem alternativa.</p>
+        </div>
+    </div>
+
+    <script>
+        let imagemAtual = 1;
+        
+        function alterarImagem() {
+            const imagem = document.getElementById('imagem');
+            const status = document.getElementById('status');
+            const altText = document.getElementById('alt-text');
+            
+            
+            setTimeout(() => {
+                if (imagemAtual === 1) {
+                    // Altera para a segunda imagem
+                    imagem.src = "/Users/moreira/Desktop/disc.web/image.png";
+                    imagem.alt = "Imagem alterada";
+                    status.textContent = "Imagem atual: Imagem Alterada";
+                    altText.textContent = "Imagem alterada";
+                    imagemAtual = 2;
+                } else {
+                    // Volta para a primeira imagem
+                    imagem.src = "/Users/moreira/Desktop/disc.web/image2.png";
+                    imagem.alt = "Imagem inicial";
+                    status.textContent = "Imagem atual: Imagem Inicial";
+                    altText.textContent = "Imagem inicial";
+                    imagemAtual = 1;
+                }
+                
+                // Remove a classe de fade out e adiciona fade in
+                imagem.classList.remove('fade-out');
+                imagem.classList.add('fade-in');
+                
+                // Remove a classe de fade in após a transição
+                setTimeout(() => {
+                    imagem.classList.remove('fade-in');
+                }, 500);
+            }, 300);
+        }
+    </script>
+</body>
+</html>
