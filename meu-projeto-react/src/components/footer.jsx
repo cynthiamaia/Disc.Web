@@ -1,7 +1,5 @@
-function Footer() { //indica a seção de rodapé da página
-    
+function Footer() { //indica a seção de rodapé da página 
    return (
-    
      <footer style={styles.footer}>
        <p> &copy; {new Date().getFullYear()}Todos os direitos reservados</p>
      </footer>
@@ -13,3 +11,6 @@ function Footer() { //indica a seção de rodapé da página
    },
  };
   export default Footer;
+//&copy -> representa o simbolo de copyright
+//new date - criar a data atual
+//.getFullYear() - pega apenas o ano da data

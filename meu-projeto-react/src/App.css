@@ -1,3 +1,20 @@
+.container {
+  display: grid; /* ativa o grid layout */
+  grid-template-areas:
+  "header header"
+  "menu"
+}
+.menu{
+  grid-area: menu;
+  background: linear-gradient(90deg, #4a90e2 0%,
+   #357ab8 100%);
+  padding: 25px 15 px;
+}
+/* itens do meu */
+.menu li{
+  margin:12 px 0;
+ cursor: pointer;
+}
 .header {
   background-color: #e24aa8;
   /* cor de fundo azul para o cabecalho */
@@ -8,6 +25,9 @@ grid-area: header;
 color: white;
 /* cor do texto branco*/
 }
+
+
+
 
 #root {
   max-width: 1280px;
