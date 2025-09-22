@@ -3,7 +3,7 @@ function Footer() { //indica a seção de rodapé da página
    return (
     
      <footer style={styles.footer}>
-       <p>Todos os direitos reservados</p>
+       <p> &copy; {new Date().getFullYear()}Todos os direitos reservados</p>
      </footer>
    );
  }
