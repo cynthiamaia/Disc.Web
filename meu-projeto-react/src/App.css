@@ -2,12 +2,21 @@
   display: grid; /* ativa o grid layout */
   grid-template-areas:
   "header header"
-  "menu"
+  "menu menu"
+  "rodape rodape"
+}
+.rodape{
+  grid-area: rodape; 
+  background-color: linear-gradient(90deg,
+   #357ab8 0%, #2a6496 100%);
+  text-align: center; /* centraliza o texto */
+  font-size: 14px; /*tamanho da fonte */
+  color: white; /* texto branco */
 }
 .menu{
   grid-area: menu;
   background: linear-gradient(90deg, #4a90e2 0%,
-   #357ab8 100%);
+  #357ab8 100%);
   padding: 25px 15 px;
 }
 /* itens do meu */
