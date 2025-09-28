@@ -17,8 +17,7 @@ body {
 }
 .rodape{
   grid-area: rodape; 
-  background-color: linear-gradient(90deg,
-   #357ab8 0%, #2a6496 100%);
+  background: linear-gradient(90deg, #357ab8 0%, #2a6496 100%);
   text-align: center; /* centraliza o texto */
   font-size: 14px; /*tamanho da fonte */
   color: white; /* texto branco */
