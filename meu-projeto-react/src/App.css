@@ -1,9 +1,19 @@
+
 .container {
   display: grid; /* ativa o grid layout */
   grid-template-areas:
   "header header"
   "menu menu"
-  "rodape rodape"
+  "rodape rodape";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 70px 1fr 50px;
+  min-height:100vh;
+}
+body {
+  font-family: "Tahoma";
+  background: linear-gradient(135deg,
+   #eef2f5 0% #d6e4f0 100%);
+
 }
 .rodape{
   grid-area: rodape; 
@@ -25,7 +35,6 @@
  cursor: pointer;
 }
 .header {
-  background-color: #e24aa8;
   /* cor de fundo azul para o cabecalho */
   align-items: center;
 /* alinha itens verticalmente ao centro */
@@ -51,9 +60,10 @@ h2 {
   font-size: 1.8rem
 }
 h1 {
-  color: #f4f6f8;
-  margin-bottom: 0.8em;
-  font-size: 2.2rem
+  color: #f4f6f8; /*cor azul */
+  margin-bottom: 0.8em; /* margens vertical */
+  font-size: 2.2rem; /* tamanho da fonte */
+  text-align: center; /*centralizado */
 }
 
 

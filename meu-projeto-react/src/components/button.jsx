@@ -1,6 +1,6 @@
 function Button({ label, onClick }){ //criar um componente funcional chamado de Button
     return (
-     <button onClick={onClick} style={styles.button}>{label}</button>
+     <button onClick={onClick} className="botao">{label}</button>
     );
             
 }
