@@ -45,6 +45,9 @@ body {
   margin-top: 25px;/* espaco acima do botao */
  
 }
+.botao:hover{
+transform: translateY(-2px);
+}
 .menu li:hover{
   background-color: #4a90e2;
   color: white;
@@ -52,7 +55,6 @@ body {
 }
 /* marcadores personalizado */
 .menu li:before{
-  content: ".";
   margin-right: 10px;
   color: inherit; /*herda a cor do elemento pai */
 }
