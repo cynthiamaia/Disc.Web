@@ -24,18 +24,41 @@ body {
 }
 .menu{
   grid-area: menu;
-  background: linear-gradient(90deg, #4a90e2 0%,
-  #357ab8 100%);
+  background: linear-gradient(90deg, #ffffff 0%,
+  #f8f9fa 100%);
   padding: 25px 15 px;
 }
 /* itens do meu */
 .menu li{
-  margin:12 px 0;
- cursor: pointer;
+  margin:12 px 0; /*margem entre os itens */
+ cursor: pointer; /*para indicar clicar */
+ color: #4a90e2; /* cor do texto */
+ background-color: #f0f5ff; /* cor do fundo azul */
+ font-weight: 500; /* peso da fonte */
+ padding: 12px 15px; /* espacamento interno */
+}
+.botao {
+  background: linear-gradient(#4a90e2 0%,
+  #357ab8); /*fundo azul*/
+  color: white; /* texto branco */
+  font-size: 0.9rem; /*tamanho da fonte*/
+  margin-top: 25px;/* espaco acima do botao */
+ 
+}
+.menu li:hover{
+  background-color: #4a90e2;
+  color: white;
+  transform: translateX(5px) 
+}
+/* marcadores personalizado */
+.menu li:before{
+  content: ".";
+  margin-right: 10px;
+  color: inherit; /*herda a cor do elemento pai */
 }
 .header {
-  background: linear-gradient(90deg #6ba6ea 0%,
-   #357ab8 100%);
+  background: linear-gradient(90deg, #357ab8 0%,
+             #2a6496 100%);
   /* cor de fundo azul para o cabecalho */
   align-items: center;
 /* alinha itens verticalmente ao centro */
@@ -51,6 +74,11 @@ color: white;
    border-radius: 12px; /* cantos arredondados */
    box-shadow: 0 5px 15 px rgba(0,0,0,0.8);
    /* sombra suave */
+}
+/*efeito houver para o card */
+.card:hover {
+transform: translateY(-5px);
+
 }
 
 h2 {
