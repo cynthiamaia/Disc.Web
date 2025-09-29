@@ -3,7 +3,7 @@
   display: grid; /* ativa o grid layout */
   grid-template-areas:
   "header header"
-  "menu menu"
+  "menu conteudo"
   "rodape rodape";
   grid-template-columns: 220px 1fr;
   grid-template-rows: 70px 1fr 50px;
@@ -13,7 +13,7 @@
 body {
   font-family: "Tahoma";
   background: linear-gradient(135deg,#eef2f5 0%, #d6e4f0 100%);
-
+  color: #333
 }
 .rodape{
   grid-area: rodape; 
@@ -34,6 +34,8 @@ body {
  cursor: pointer;
 }
 .header {
+  background: linear-gradient(90deg #6ba6ea 0%,
+   #357ab8 100%);
   /* cor de fundo azul para o cabecalho */
   align-items: center;
 /* alinha itens verticalmente ao centro */
