@@ -20,7 +20,7 @@ function Register() {
         };
 
     return (
-        <div>
+        <div style={{maxWidth: 300, margin:"50 px auto", textAlign: "center"}}>
         <h2>Cadastro</h2> 
         <form onSubmit={handleRegister}>
             <input
@@ -29,16 +29,17 @@ function Register() {
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
                 required
+                style={{display:"block", width: "100%", marginBottom:10}}
             />
             <input
-                type="text"
+                type="email"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
             />
             <input
-                type="text"
+                type="password"
                 placeholder="Senha"
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}
