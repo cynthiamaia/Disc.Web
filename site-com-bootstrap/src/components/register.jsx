@@ -20,7 +20,7 @@ function Register() {
         };
 
     return (
-        <div style={{maxWidth: 300, margin:"50 px auto", textAlign: "center"}}>
+        <div style={{maxWidth: 300, margin:"50px auto", textAlign: "center"}}>
         <h2>Cadastro</h2> 
         <form onSubmit={handleRegister}>
             <input
@@ -37,6 +37,7 @@ function Register() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                style={{display:"block", width: "100%", marginBottom:10}}
             />
             <input
                 type="password"
@@ -44,6 +45,7 @@ function Register() {
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}
                 required
+                style={{display:"block", width: "100%", marginBottom:10}}
             />
             <button type="submit">Cadastrar</button>
         </form>
