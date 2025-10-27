@@ -7,6 +7,7 @@ import Footer from './components/footer'
 import MainContent from './components/maincontent';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Register from './components/register';
+import Login from "./components/login";
 function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainContent/>}/>
         <Route path="/register" element={<Register/>}/> {}
+        <Route path="/login" element={<Login />}></Route>      
       </Routes>  
       </main> 
       <Footer/>
