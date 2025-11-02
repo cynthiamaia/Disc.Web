@@ -2,7 +2,7 @@ import express from "express";
 import admin from "firebase-admin";
 import cors from "cors";
 
-
+teste
 var admin = require("firebase-admin");
 
 var serviceAccount = require("path/to/");
