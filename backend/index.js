@@ -2,7 +2,6 @@ import express from "express";
 import admin from "firebase-admin";
 import cors from "cors";
 
-teste
 var admin = require("firebase-admin");
 
 var serviceAccount = require("path/to/");
@@ -11,6 +10,10 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
 
+
+const PORT = 3000;
+app.listen(PORT, () => console.log(`API rodando em http://localhost:${PORT}`));
+
 /* const app = express();
 const PORT = 3000;
 app.get("/", (req, resp) =>{
@@ -18,5 +21,5 @@ app.get("/", (req, resp) =>{
 });
 //inicia o servidor funcao listen()
 app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`)
+    console.log(`API rodando em http://localhost:${PORT}`)
 })*/
