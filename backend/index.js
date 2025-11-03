@@ -1,11 +1,15 @@
 import express from "express";
 import admin from "firebase-admin";
 import cors from "cors";
+import {fileURLToPath } from "url";
+import { dirname } from "path";//extrair o diretorio
+import { readFileSync } from "fs";// leitura do arquivo
 
+//extrai o diretorio
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
+var serviceAccount = JSON.parse(readFileSync(`${__dirname}/projeto-web-24623-firebase-adminsdk-fbsvc-be96c15c43.json`))
 var admin = require("firebase-admin");
-
-var serviceAccount = require("path/to/");
-
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
