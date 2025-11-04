@@ -9,6 +9,7 @@ import { readFileSync } from "fs";// leitura do arquivo
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 var serviceAccount = JSON.parse(readFileSync(`${__dirname}/projeto-web-24623-firebase-adminsdk-fbsvc-be96c15c43.json`))
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
@@ -33,7 +34,7 @@ app.post("/posts", async(req, res) => {
       title,
       content,
       author: author || "Anonimo",
-      createdAt: admin.firestore.FieldValue.serverTimesstamp(),
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
     res.status(200).json({message: "Post criado com sucesso!"})
   } catch (err){
