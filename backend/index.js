@@ -42,6 +42,47 @@ app.post("/posts", async(req, res) => {
   }
 })
 
+app.put("/put/:id", async(req, res) =>{
+  try {
+    const { id } = req.params; //capturar o id da rota
+    const { title, content, author } = req.body;
+    //extrair do corpo da requisicao
+
+    if (!id){
+      return res.status(400).json({ error: 'Id do put é obrigatorio'})
+    }
+    const updateData = {};
+    if (title) updateData.title = title;
+    if (content) updateData.content = content;
+    if (author) updateData.author = author;
+    updateData.updatedAt = admin.firestore.FieldValue.serverTimestamp(); // o erro era aqui no nome da varivel
+    const postRef = db.collection("posts").doc(id)
+    
+    await postRef.update(updateData)
+    res.status(200).json({message:  'Post atualizado com sucesso'})
+  }
+  catch (err){
+    res.status(500).json({error:  'Erro no servidor'})
+  }
+})
+app.delete("/delete/:id", async (req, res) => {
+  //assincrono, leva algum tempo ate que o firestore elte o documento
+  try{
+    const {id} = req.params;
+    if (!id){
+      return res.status(400).json({error:'Id é obrigatorio'})
+    }
+    const postRef = db.collection("posts").doc(id)
+    //cria uma referencia ao documento com id da colecao
+    await postRef.delete() //deleta o documento
+    res.status(200).json({message: "Deletado com sucesso"})
+  }
+  catch{
+    res.status(500).json({error:'Erro servidor'})
+  }
+})
+
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`API rodando em http://localhost:${PORT}`));
 
