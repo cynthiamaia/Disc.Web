@@ -66,7 +66,7 @@ app.put("/put/:id", async(req, res) =>{
   }
 })
 app.delete("/delete/:id", async (req, res) => {
-  //assincrono, leva algum tempo ate que o firestore elte o documento
+  //assincrono wait, leva algum tempo ate que o firestore elte o documento
   try{
     const {id} = req.params;
     if (!id){
