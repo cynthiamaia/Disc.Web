@@ -81,6 +81,31 @@ app.delete("/delete/:id", async (req, res) => {
     res.status(500).json({error:'Erro servidor'})
   }
 })
+app.get("/buscar", async(req,res) => {
+  try{
+    const resul = await db.collection("posts").orderBy("createdAt", "desc").get();
+
+    if (resul.empty){ //caso nao haja documentos na colecao
+      return res.status(200).json({message: "Nenhum post encontrado"})
+    }
+    const posts = resul.docs.map((doc) =>{
+    const data = doc.data();
+    return {
+      id: doc.id,
+      title: data.title,
+      content: data.content,
+      author: data.author,
+      createdAt: data.createdAt
+    };
+    });
+    res.status(200).json(posts)
+  } catch (err){
+    res.status(500).json({error: "Erro ao buscar"})
+  }
+})
+
+
+
 
 
 const PORT = 3000;
