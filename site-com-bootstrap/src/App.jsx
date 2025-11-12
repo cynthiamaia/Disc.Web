@@ -4,9 +4,11 @@ import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import Header from './components/header';
 import Footer from './components/footer'
+import Login from './components/login';
 import MainContent from './components/maincontent';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Register from './components/register';
+import RegisterPost from './components/registerP';
 function App() {
   return (
     <Router>
@@ -15,7 +17,9 @@ function App() {
       <main className="flex-grow-1 w-100">
       <Routes>
         <Route path="/" element={<MainContent/>}/>
-        <Route path="/register" element={<Register/>}/> {}
+        <Route path="/register" element={<Register/>}/> 
+        <Route path="/register-post" element={<RegisterPost/>}></Route>
+         <Route path="/login" element={<Login />} />
       </Routes>  
       </main> 
       <Footer/>

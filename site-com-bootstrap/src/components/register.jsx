@@ -1,5 +1,6 @@
 import  { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { useNavigate } from "react-router-dom"; // Para redirecionar
 import { auth } from "../firebase";
 function Register() {
     //inicializa o estado com string vazia
@@ -7,6 +8,7 @@ function Register() {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [erro, setErro] = useState("");
+    const navigate = useNavigate();
 
     //impede o carregamento, sem ela, a pagina recarregaria
     const handleRegister = async (e) => {
@@ -14,6 +16,7 @@ function Register() {
         //await -> faz a funcao esperar ate o firebase confirmar a criacao do usuario
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, senha);
+            navigate("/login"); 
         } catch (error){
             setErro(error.message);
         }
